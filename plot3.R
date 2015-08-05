@@ -1,21 +1,7 @@
 source("load_data.R")
+source("plot3_core.R")
 selData <- loadData()
-
-png(filename="plot3.png",
-    width=480, height=480)
+save.par=par()
 par(mar=c(2.1,4.1,2.1,1.1))
-with(selData,plot(absTime,Sub_metering_1,
-                  type="l",
-                  xlab=NA,
-                  ylab="Energy sub metering"))
-with(selData,lines(absTime,Sub_metering_2, col="red"))
-with(selData,lines(absTime,Sub_metering_3, col="blue"))
-legend("topright",col=c("black","red","blue"),
-       legend=c("Sub_metering_1",
-                "Sub_metering_2",
-                "Sub_metering_3"),
-       lty=1
-       
-)
-
-dev.off()
+plot3(selData)
+suppressWarnings(par(save.par))

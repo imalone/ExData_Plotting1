@@ -7,4 +7,5 @@ loadData <- function() {
   selData=allData[as.Date(allData$Date, format("%d/%m/%Y"))
                   %in% matchDates,]
   selData$absTime=dmy_hms(paste(selData$Date,selData$Time))
+  selData
 }
