@@ -1,3 +1,5 @@
+# Do plot 1, by default write to file, if pngout=NA
+# then write to current device.
 plot1 <- function(selData, pngout="plot1.png") {
   if (!is.na(pngout)) {
     png(filename=pngout,
@@ -13,3 +15,4 @@ plot1 <- function(selData, pngout="plot1.png") {
     dev.off()
   }
 }
+

@@ -1,3 +1,6 @@
+# Do one of the plot4 subplots (first new plot),
+# by default write to file, if pngout=NA
+# then write to current device.
 plot4a <- function(selData, pngout="plot4a.png") {
   if(!is.na(pngout)) {
     png(filename=pngout,
@@ -11,6 +14,9 @@ plot4a <- function(selData, pngout="plot4a.png") {
   }
 }
 
+# Do one of the plot4 subplots (second new plot),
+# by default write to file, if pngout=NA
+# then write to current device.
 plot4b <- function(selData, pngout="plot4b.png") {
   if(!is.na(pngout)) {
     png(filename=pngout,
@@ -23,3 +29,4 @@ plot4b <- function(selData, pngout="plot4b.png") {
     dev.off()
   }
 }
+

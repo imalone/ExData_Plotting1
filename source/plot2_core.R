@@ -1,3 +1,6 @@
+# Do plot 2, by default write to file, if pngout=NA
+# then write to current device.
+# ylab parameter can be set to alter y axis label
 plot2 <- function(selData, pngout="plot2.png",
                   ylab="Global Active Power (kilowatts)") {
   if(!is.na(pngout)) {
@@ -12,3 +15,4 @@ plot2 <- function(selData, pngout="plot2.png",
     dev.off()
   }
 }
+

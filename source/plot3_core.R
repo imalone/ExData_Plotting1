@@ -1,3 +1,7 @@
+# Do plot 3, by default write to file, if pngout=NA
+# then write to current device.
+# legend.bty sets the legend bty paramter, either "o" for
+# legend box border (default) or "n" for no border.
 plot3 <- function(selData, pngout="plot3.png",
                   legend.bty="o") {
   if(!is.na(pngout)) {
@@ -22,3 +26,4 @@ plot3 <- function(selData, pngout="plot3.png",
     dev.off()
   }
 }
+
