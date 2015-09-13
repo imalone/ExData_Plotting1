@@ -1,3 +1,5 @@
+# Compose separate functions into single R files
+# to meet single file-per-plot requirement.
 all: plot1.R plot2.R plot3.R plot4.R
 
 plot1.R : source/load_data.R source/plot1.R source/plot1_core.R
